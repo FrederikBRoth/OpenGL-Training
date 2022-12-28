@@ -19,6 +19,15 @@
     <Filter Include="Source Files\Shaders">
       <UniqueIdentifier>{464d3e57-231f-4d40-894e-27925176ce69}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Helpers">
+      <UniqueIdentifier>{d3f30de3-a1f5-4a90-8c5c-6330823226f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercises">
+      <UniqueIdentifier>{7e2e07fd-19fb-4231-bec3-3e90b501c923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercises\01-Getting Started">
+      <UniqueIdentifier>{5e1eaf78-7f5f-4839-8d15-f89b67d3180c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="D:\Downloads\glad.c">
@@ -28,7 +37,16 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HelperFunctions.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\01-Getting Started\Exercise02.cpp">
+      <Filter>Source Files\Exercises\01-Getting Started</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\01-Getting Started\Exercise01.cpp">
+      <Filter>Source Files\Exercises\01-Getting Started</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\01-Getting Started\Exercise03.cpp">
+      <Filter>Source Files\Exercises\01-Getting Started</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,10 +56,13 @@
     <None Include="SimpleFragShader.frag">
       <Filter>Source Files\Shaders</Filter>
     </None>
+    <None Include="Exercises\01-Getting Started\YellowFragShader.frag">
+      <Filter>Source Files\Exercises\01-Getting Started</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HelperFunctions.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Helpers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

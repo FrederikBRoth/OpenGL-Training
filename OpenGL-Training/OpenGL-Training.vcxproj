@@ -145,10 +145,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="D:\Downloads\glad.c" />
+    <ClCompile Include="Exercises\01-Getting Started\Exercise02.cpp" />
+    <ClCompile Include="Exercises\01-Getting Started\Exercise01.cpp" />
+    <ClCompile Include="Exercises\01-Getting Started\Exercise03.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="HelperFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Exercises\01-Getting Started\YellowFragShader.frag" />
     <None Include="SimpleFragShader.frag" />
     <None Include="SimpleVertShader.vert" />
   </ItemGroup>
