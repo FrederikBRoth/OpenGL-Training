@@ -145,7 +145,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="D:\Downloads\glad.c" />
-    <ClCompile Include="01_Window.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="HelperFunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SimpleFragShader.frag" />
+    <None Include="SimpleVertShader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HelperFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
