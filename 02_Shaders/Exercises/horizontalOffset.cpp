@@ -2,7 +2,7 @@
 #include <glad/glad.h>
 #include <GLFW\glfw3.h>
 #include <iostream>
-#include "Shader.h"
+#include "../Shader.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -67,8 +67,7 @@ int main() {
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
 
-	Shader simple = Shader("SimpleVertShader.vert", "SimpleFragShader.frag");
-	Shader uniform = Shader("SimpleVertShader.vert", "UniformtestFragShader.frag");
+	Shader uniform = Shader("HorizontalOffsetVertShader.vert", "UniformtestFragShader.frag");
 
 
 	while (!glfwWindowShouldClose(window))
@@ -77,6 +76,7 @@ int main() {
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		uniform.use();
+		uniform.setFloat("offset", 0.5);
 		//float timeValue = glfwGetTime();
 		//float greenValue = sin(timeValue) / 2.0f + 0.5f;
 		//int vertexColorLocation = glGetUniformLocation(uniformShaderProgram,

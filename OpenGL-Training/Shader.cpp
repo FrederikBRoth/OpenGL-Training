@@ -1,4 +1,4 @@
-#include "HelperFunctions.h"
+#include "Shader.h"
 std::string getCString(const char* filepath) {
 	std::string ShaderCode;
 	std::ifstream ShaderCodeStream(filepath, std::ios::in);

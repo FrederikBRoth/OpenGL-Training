@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{df7cf0ef-827b-4eec-9d77-a4e894ff754f}</ProjectGuid>
-    <RootNamespace>OpenGLTraining</RootNamespace>
+    <ProjectGuid>{f27ff192-4902-4075-9bc7-b7e197525c84}</ProjectGuid>
+    <RootNamespace>_02_Shaders</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>01_GettingStarted</ProjectName>
+    <ProjectName>02_Shaders</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -145,16 +145,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="D:\Downloads\glad.c" />
-    <ClCompile Include="Exercises\01-Getting Started\Exercise02.cpp" />
-    <ClCompile Include="Exercises\01-Getting Started\Exercise01.cpp" />
-    <ClCompile Include="Exercises\01-Getting Started\Exercise03.cpp" />
+    <ClCompile Include="Exercises\horizontalOffset.cpp" />
+    <ClCompile Include="Exercises\upsidedowntriangle.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Exercises\01-Getting Started\YellowFragShader.frag" />
+    <None Include="Exercises\YellowFragShader.frag" />
+    <None Include="HorizontalOffsetVertShader.vert" />
     <None Include="SimpleFragShader.frag" />
     <None Include="SimpleVertShader.vert" />
     <None Include="UniformtestFragShader.frag" />
+    <None Include="Exercises\UpsideDownVertShader.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h" />
