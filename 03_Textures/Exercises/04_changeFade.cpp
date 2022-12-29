@@ -2,8 +2,10 @@
 #include <glad/glad.h>
 #include <GLFW\glfw3.h>
 #include <iostream>
-#include "Shader.h"
-#include "stb_image.h"
+#include <ShaderLoader/Shader.h>
+#include <stb_image.h>
+
+volatile float sampleRate = 0.0f;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -13,6 +15,22 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 void processInput(GLFWwindow* window) {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, true);
+	}
+	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+		if (sampleRate < 0.9999f) {
+			sampleRate += 0.005f;
+		}
+		else {
+			sampleRate = 1.0f;
+		}
+	}
+	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+		if (sampleRate > 0.0f) {
+			sampleRate -= 0.005f;
+		}
+		else {
+			sampleRate = 0.0f;
+		}
 	}
 }
 
@@ -116,11 +134,10 @@ int main() {
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 	glEnableVertexAttribArray(2);
 
-	Shader uniform = Shader("SimpleVertShader.vert", "UniformtestFragShader.frag");
-	Shader textured = Shader("TextureVertShader.vert", "TextureFragShader.frag");
-	Shader mixtextured = Shader("TextureVertShader.vert", "TextureMixFragShader.frag");
-	mixtextured.use();
-	mixtextured.setInt("texture2", 1);
+
+	Shader mixtexturedUniformSample = Shader("TextureVertShader.vert", "Exercises/04_UniformTextureShader.frag");
+	mixtexturedUniformSample.use();
+	mixtexturedUniformSample.setInt("texture2", 1);
 
 
 
@@ -130,7 +147,8 @@ int main() {
 		processInput(window);
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-
+		mixtexturedUniformSample.use();
+		mixtexturedUniformSample.setFloat("sampleRate", sampleRate);
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, texture1);
 		glActiveTexture(GL_TEXTURE1);
@@ -138,7 +156,6 @@ int main() {
 
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-		mixtextured.use();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

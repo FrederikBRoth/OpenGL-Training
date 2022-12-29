@@ -145,10 +145,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="D:\Downloads\glad.c" />
+    <ClCompile Include="Exercises\02_textureMirror.cpp" />
+    <ClCompile Include="Exercises\03_centerPixels.cpp" />
+    <ClCompile Include="Exercises\04_changeFade.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Exercises\01_OnlyTexture2ReverseShader.frag" />
+    <None Include="Exercises\02_DoubleSizeFrag.frag" />
+    <None Include="Exercises\03_CenterPixels.frag" />
+    <None Include="Exercises\04_UniformTextureShader.frag" />
     <None Include="SimpleFragShader.frag" />
     <None Include="SimpleVertShader.vert" />
     <None Include="TextureFragShader.frag" />
@@ -163,6 +170,7 @@
   <ItemGroup>
     <Image Include="awesomeface.png" />
     <Image Include="container.jpg" />
+    <Image Include="D:\Downloads\container.jpg" />
     <Image Include="D:\Downloads\wall.jpg">
       <DeploymentContent>false</DeploymentContent>
       <FileType>Image</FileType>

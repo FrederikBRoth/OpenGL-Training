@@ -36,6 +36,15 @@
     <ClCompile Include="stb_image.cpp">
       <Filter>Source Files\Helpers</Filter>
     </ClCompile>
+    <ClCompile Include="Exercises\04_changeFade.cpp">
+      <Filter>Source Files\Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\03_centerPixels.cpp">
+      <Filter>Source Files\Exercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\02_textureMirror.cpp">
+      <Filter>Source Files\Exercises</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleVertShader.vert">
@@ -47,14 +56,20 @@
     <None Include="UniformtestFragShader.frag">
       <Filter>Source Files\Shaders</Filter>
     </None>
-    <None Include="TextureVertShader.vert">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="TextureFragShader.frag" />
+    <None Include="TextureMixFragShader.frag" />
+    <None Include="TextureVertShader.vert" />
+    <None Include="Exercises\01_OnlyTexture2ReverseShader.frag">
+      <Filter>Source Files\Exercises</Filter>
     </None>
-    <None Include="TextureFragShader.frag">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="Exercises\02_DoubleSizeFrag.frag">
+      <Filter>Source Files\Exercises</Filter>
     </None>
-    <None Include="TextureMixFragShader.frag">
-      <Filter>Source Files\Shaders</Filter>
+    <None Include="Exercises\03_CenterPixels.frag">
+      <Filter>Source Files\Exercises</Filter>
+    </None>
+    <None Include="Exercises\04_UniformTextureShader.frag">
+      <Filter>Source Files\Exercises</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="D:\Downloads\wall.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="D:\Downloads\container.jpg">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="container.jpg">
